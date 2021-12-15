@@ -38,6 +38,8 @@
 		B4F1A0302768E882006D8521 /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A02F2768E882006D8521 /* CoreDataContainer.swift */; };
 		B4F1A0322768E8A9006D8521 /* CDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0312768E8A9006D8521 /* CDController.swift */; };
 		B4F1A0352768E8E9006D8521 /* fefuactivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0332768E8E9006D8521 /* fefuactivity.xcdatamodeld */; };
+		B4F1A0382768F5B3006D8521 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0372768F5B3006D8521 /* Types.swift */; };
+		B4F1A03A2768F5F2006D8521 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0392768F5F2006D8521 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		B4F1A02F2768E882006D8521 /* CoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
 		B4F1A0312768E8A9006D8521 /* CDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B4F1A0342768E8E9006D8521 /* fefuactivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fefuactivity.xcdatamodel; sourceTree = "<group>"; };
+		B4F1A0372768F5B3006D8521 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		B4F1A0392768F5F2006D8521 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 		B4F1A02D2768E861006D8521 /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
+				B4F1A0362768F5A2006D8521 /* ApiHelpers */,
 				B4F1A02E2768E86B006D8521 /* CoreData */,
 			);
 			path = "Service Layer";
@@ -260,6 +265,15 @@
 				B4F1A0312768E8A9006D8521 /* CDController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B4F1A0362768F5A2006D8521 /* ApiHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4F1A0372768F5B3006D8521 /* Types.swift */,
+				B4F1A0392768F5F2006D8521 /* AuthService.swift */,
+			);
+			path = ApiHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,8 +358,10 @@
 				B4F1A0302768E882006D8521 /* CoreDataContainer.swift in Sources */,
 				B4F1A02A2768E254006D8521 /* TypeCollectionViewCell.swift in Sources */,
 				1DE4E5C9270A5CCE004A30CA /* ViewController.swift in Sources */,
+				B4F1A0382768F5B3006D8521 /* Types.swift in Sources */,
 				B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */,
 				B4F1A0262768E191006D8521 /* FinishButton.swift in Sources */,
+				B4F1A03A2768F5F2006D8521 /* AuthService.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
 				B4F1A0322768E8A9006D8521 /* CDController.swift in Sources */,
 				B4BEC0C5276774AF006BBAAB /* ActivityListController.swift in Sources */,

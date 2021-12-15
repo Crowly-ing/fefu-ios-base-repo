@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="fefuactivity" customModuleProvider="target">
             <connections>
                 <outlet property="continueButton" destination="HIG-f3-Cqu" id="ypR-Io-eoh"/>
+                <outlet property="loginField" destination="6GY-T8-hBY" id="Oha-pQ-WJi"/>
+                <outlet property="passwordField" destination="mqx-yq-OFZ" id="f5K-OI-ZyJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Логин" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-T8-hBY">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-T8-hBY" customClass="FormTextField" customModule="fefuactivity" customModuleProvider="target">
                     <rect key="frame" x="16" y="16" width="382" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ONV-wn-ULV"/>
@@ -29,7 +31,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Пароль" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqx-yq-OFZ">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqx-yq-OFZ" customClass="FormTextField" customModule="fefuactivity" customModuleProvider="target">
                     <rect key="frame" x="16" y="82" width="382" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ke4-kn-RnV"/>
@@ -45,6 +47,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="didTapContinue:" destination="-1" eventType="touchUpInside" id="8mQ-Ta-5pk"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Riders" translatesAutoresizingMaskIntoConstraints="NO" id="qFX-na-n5q">
                     <rect key="frame" x="0.0" y="247" width="414" height="403"/>
