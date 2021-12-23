@@ -19,6 +19,16 @@
 		B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0B527676230006BBAAB /* LoginController.swift */; };
 		B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0B627676230006BBAAB /* LoginController.xib */; };
 		B4BEC0BD27676798006BBAAB /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0BC27676798006BBAAB /* FormTextField.swift */; };
+		B4BEC0C0276773FD006BBAAB /* TabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0BE276773FD006BBAAB /* TabsController.swift */; };
+		B4BEC0C1276773FD006BBAAB /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0BF276773FD006BBAAB /* TabsController.xib */; };
+		B4BEC0C5276774AF006BBAAB /* ActivityListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0C3276774AF006BBAAB /* ActivityListController.swift */; };
+		B4BEC0C6276774AF006BBAAB /* ActivityListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0C4276774AF006BBAAB /* ActivityListController.xib */; };
+		B4BEC0C9276774BF006BBAAB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0C7276774BF006BBAAB /* ProfileController.swift */; };
+		B4BEC0CA276774BF006BBAAB /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0C8276774BF006BBAAB /* ProfileController.xib */; };
+		B4BEC0CF27678CF4006BBAAB /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0CD27678CF4006BBAAB /* ActivityTableViewCell.swift */; };
+		B4BEC0D027678CF4006BBAAB /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0CE27678CF4006BBAAB /* ActivityTableViewCell.xib */; };
+		B4BEC0D427679271006BBAAB /* ActivityDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0D227679271006BBAAB /* ActivityDetailsController.swift */; };
+		B4BEC0D527679271006BBAAB /* ActivityDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0D327679271006BBAAB /* ActivityDetailsController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +46,16 @@
 		B4BEC0B527676230006BBAAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B4BEC0B627676230006BBAAB /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		B4BEC0BC27676798006BBAAB /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		B4BEC0BE276773FD006BBAAB /* TabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsController.swift; sourceTree = "<group>"; };
+		B4BEC0BF276773FD006BBAAB /* TabsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabsController.xib; sourceTree = "<group>"; };
+		B4BEC0C3276774AF006BBAAB /* ActivityListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListController.swift; sourceTree = "<group>"; };
+		B4BEC0C4276774AF006BBAAB /* ActivityListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityListController.xib; sourceTree = "<group>"; };
+		B4BEC0C7276774BF006BBAAB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		B4BEC0C8276774BF006BBAAB /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
+		B4BEC0CD27678CF4006BBAAB /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		B4BEC0CE27678CF4006BBAAB /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B4BEC0D227679271006BBAAB /* ActivityDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsController.swift; sourceTree = "<group>"; };
+		B4BEC0D327679271006BBAAB /* ActivityDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailsController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +102,7 @@
 		B4BEC0A927675C6E006BBAAB /* App Layer */ = {
 			isa = PBXGroup;
 			children = (
+				B4BEC0D127678D00006BBAAB /* TableViewCells */,
 				B4BEC0BB2767677A006BBAAB /* TextFields */,
 				B4BEC0AB27675C8F006BBAAB /* Buttons */,
 				B4BEC0AA27675C7C006BBAAB /* Controllers */,
@@ -95,6 +116,10 @@
 				1DE4E5C8270A5CCE004A30CA /* ViewController.swift */,
 				B4BEC0B4276761F8006BBAAB /* Registration */,
 				B4BEC0B927676251006BBAAB /* Login */,
+				B4BEC0C227677402006BBAAB /* Tabs */,
+				B4BEC0CB276774C2006BBAAB /* ActivityList */,
+				B4BEC0CC276774CB006BBAAB /* Profile */,
+				B4BEC0D627679275006BBAAB /* ActivityDetails */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +156,51 @@
 				B4BEC0BC27676798006BBAAB /* FormTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		B4BEC0C227677402006BBAAB /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0BE276773FD006BBAAB /* TabsController.swift */,
+				B4BEC0BF276773FD006BBAAB /* TabsController.xib */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		B4BEC0CB276774C2006BBAAB /* ActivityList */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0C3276774AF006BBAAB /* ActivityListController.swift */,
+				B4BEC0C4276774AF006BBAAB /* ActivityListController.xib */,
+			);
+			path = ActivityList;
+			sourceTree = "<group>";
+		};
+		B4BEC0CC276774CB006BBAAB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0C7276774BF006BBAAB /* ProfileController.swift */,
+				B4BEC0C8276774BF006BBAAB /* ProfileController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B4BEC0D127678D00006BBAAB /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0CD27678CF4006BBAAB /* ActivityTableViewCell.swift */,
+				B4BEC0CE27678CF4006BBAAB /* ActivityTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		B4BEC0D627679275006BBAAB /* ActivityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0D227679271006BBAAB /* ActivityDetailsController.swift */,
+				B4BEC0D327679271006BBAAB /* ActivityDetailsController.xib */,
+			);
+			path = ActivityDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BEC0B2276761EE006BBAAB /* RegistrationController.xib in Resources */,
+				B4BEC0D027678CF4006BBAAB /* ActivityTableViewCell.xib in Resources */,
 				1DE4E5D1270A5CD0004A30CA /* LaunchScreen.storyboard in Resources */,
+				B4BEC0C6276774AF006BBAAB /* ActivityListController.xib in Resources */,
+				B4BEC0CA276774BF006BBAAB /* ProfileController.xib in Resources */,
+				B4BEC0D527679271006BBAAB /* ActivityDetailsController.xib in Resources */,
 				1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */,
 				B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */,
 				1DE4E5CC270A5CCE004A30CA /* Main.storyboard in Resources */,
+				B4BEC0C1276773FD006BBAAB /* TabsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +283,13 @@
 				1DE4E5C9270A5CCE004A30CA /* ViewController.swift in Sources */,
 				B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
+				B4BEC0C5276774AF006BBAAB /* ActivityListController.swift in Sources */,
+				B4BEC0CF27678CF4006BBAAB /* ActivityTableViewCell.swift in Sources */,
 				B4BEC0BD27676798006BBAAB /* FormTextField.swift in Sources */,
+				B4BEC0C9276774BF006BBAAB /* ProfileController.swift in Sources */,
 				B4BEC0AE27675CBE006BBAAB /* PrimaryButton.swift in Sources */,
+				B4BEC0C0276773FD006BBAAB /* TabsController.swift in Sources */,
+				B4BEC0D427679271006BBAAB /* ActivityDetailsController.swift in Sources */,
 				B4BEC0B1276761EE006BBAAB /* RegistrationController.swift in Sources */,
 				1DE4E5C7270A5CCE004A30CA /* SceneDelegate.swift in Sources */,
 			);
