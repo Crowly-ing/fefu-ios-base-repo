@@ -13,6 +13,12 @@
 		1DE4E5CC270A5CCE004A30CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CA270A5CCE004A30CA /* Main.storyboard */; };
 		1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */; };
 		1DE4E5D1270A5CD0004A30CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CF270A5CD0004A30CA /* LaunchScreen.storyboard */; };
+		B4BEC0AE27675CBE006BBAAB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0AD27675CBE006BBAAB /* PrimaryButton.swift */; };
+		B4BEC0B1276761EE006BBAAB /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0AF276761EE006BBAAB /* RegistrationController.swift */; };
+		B4BEC0B2276761EE006BBAAB /* RegistrationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0B0276761EE006BBAAB /* RegistrationController.xib */; };
+		B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0B527676230006BBAAB /* LoginController.swift */; };
+		B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BEC0B627676230006BBAAB /* LoginController.xib */; };
+		B4BEC0BD27676798006BBAAB /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEC0BC27676798006BBAAB /* FormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DE4E5D0270A5CD0004A30CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DE4E5D2270A5CD0004A30CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4BEC0AD27675CBE006BBAAB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		B4BEC0AF276761EE006BBAAB /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		B4BEC0B0276761EE006BBAAB /* RegistrationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationController.xib; sourceTree = "<group>"; };
+		B4BEC0B527676230006BBAAB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B4BEC0B627676230006BBAAB /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		B4BEC0BC27676798006BBAAB /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,69 @@
 		1DE4E5C3270A5CCE004A30CA /* fefuactivity */ = {
 			isa = PBXGroup;
 			children = (
+				B4BEC0A927675C6E006BBAAB /* App Layer */,
 				1DE4E5C4270A5CCE004A30CA /* AppDelegate.swift */,
 				1DE4E5C6270A5CCE004A30CA /* SceneDelegate.swift */,
-				1DE4E5C8270A5CCE004A30CA /* ViewController.swift */,
 				1DE4E5CA270A5CCE004A30CA /* Main.storyboard */,
 				1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */,
 				1DE4E5CF270A5CD0004A30CA /* LaunchScreen.storyboard */,
 				1DE4E5D2270A5CD0004A30CA /* Info.plist */,
 			);
 			path = fefuactivity;
+			sourceTree = "<group>";
+		};
+		B4BEC0A927675C6E006BBAAB /* App Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0BB2767677A006BBAAB /* TextFields */,
+				B4BEC0AB27675C8F006BBAAB /* Buttons */,
+				B4BEC0AA27675C7C006BBAAB /* Controllers */,
+			);
+			path = "App Layer";
+			sourceTree = "<group>";
+		};
+		B4BEC0AA27675C7C006BBAAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DE4E5C8270A5CCE004A30CA /* ViewController.swift */,
+				B4BEC0B4276761F8006BBAAB /* Registration */,
+				B4BEC0B927676251006BBAAB /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4BEC0AB27675C8F006BBAAB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0AD27675CBE006BBAAB /* PrimaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B4BEC0B4276761F8006BBAAB /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0AF276761EE006BBAAB /* RegistrationController.swift */,
+				B4BEC0B0276761EE006BBAAB /* RegistrationController.xib */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		B4BEC0B927676251006BBAAB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0B527676230006BBAAB /* LoginController.swift */,
+				B4BEC0B627676230006BBAAB /* LoginController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B4BEC0BB2767677A006BBAAB /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				B4BEC0BC27676798006BBAAB /* FormTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +190,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BEC0B2276761EE006BBAAB /* RegistrationController.xib in Resources */,
 				1DE4E5D1270A5CD0004A30CA /* LaunchScreen.storyboard in Resources */,
 				1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */,
+				B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */,
 				1DE4E5CC270A5CCE004A30CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE4E5C9270A5CCE004A30CA /* ViewController.swift in Sources */,
+				B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
+				B4BEC0BD27676798006BBAAB /* FormTextField.swift in Sources */,
+				B4BEC0AE27675CBE006BBAAB /* PrimaryButton.swift in Sources */,
+				B4BEC0B1276761EE006BBAAB /* RegistrationController.swift in Sources */,
 				1DE4E5C7270A5CCE004A30CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
