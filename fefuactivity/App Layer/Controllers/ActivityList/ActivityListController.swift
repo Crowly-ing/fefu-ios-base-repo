@@ -9,34 +9,9 @@ class ActivityListController: UIViewController {
     @IBOutlet weak var startActivityButton: PrimaryButton!
     @IBOutlet weak var emptyDataView: UIView!
     @IBOutlet weak var activityList: UITableView!
+    private let CDHelper = CDController()
     
-    private let data: [ActivityTableViewVM] = {
-        let yesterdayActivities: [ActivityTableCellVM] = [
-            ActivityTableCellVM(distance: "14.32 км",
-                                duration: "2 часа 46 минут",
-                                title: "Велосипед",
-                                timeAgo: "14 часов назад",
-                                icon: UIImage(systemName: "bicycle.circle.fill") ?? UIImage(),
-                                start: "14:49",
-                                end: "16:31"
-                               )
-        ]
-        
-        let decemberActivities: [ActivityTableCellVM] = [
-            ActivityTableCellVM(distance: "14.32 км",
-                                duration: "2 часа 46 минут",
-                                title: "Велосипед",
-                                timeAgo: "14 часов назад",
-                                icon: UIImage(systemName: "bicycle.circle.fill") ?? UIImage(),
-                                start: "14:49",
-                                end: "16:31"
-                               )
-        ]
-        return [
-            ActivityTableViewVM(date: "Вчера", activities: yesterdayActivities),
-            ActivityTableViewVM(date: "Декабрь 1991", activities: decemberActivities)
-        ]
-    }()
+    private var data: [ActivityTableViewVM] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +25,12 @@ class ActivityListController: UIViewController {
         commonInit()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetch()
+        self.activityList.reloadData()
+    }
+    
     private func commonInit() {
         self.title = "Активности"
         
@@ -60,8 +41,36 @@ class ActivityListController: UIViewController {
         activityList.backgroundColor = .clear
         activityList.separatorStyle = .none
         
-        emptyDataView.isHidden = false
-        activityList.isHidden = true
+        emptyDataView.isHidden = data.isEmpty
+        activityList.isHidden = !data.isEmpty
+    }
+    
+    private func fetch() {
+        do {
+            let rawActivities = try CDHelper.fetch()
+            let activitiesViewModels: [ActivityTableCellVM] = rawActivities.map { activity in
+                let image = UIImage(systemName: "bicycle.circle.fill") ?? UIImage()
+                
+                return ActivityTableCellVM(distance: activity.distance ?? "",
+                                         duration: activity.duration ?? "",
+                                         title: activity.type ?? "",
+                                         timeAgo: activity.date ?? "",
+                                         icon: image,
+                                         start: activity.start ?? "",
+                                         end: activity.end ?? "")
+            }
+            
+            let group = Dictionary(grouping: activitiesViewModels) { activityVM in
+                return activityVM.timeAgo
+            }
+            
+            self.data = group.map { (key, values) in
+                return ActivityTableViewVM(date: key, activities: values)
+            }
+        } catch {
+            print(error)
+        }
+        
     }
     
     @IBAction func didStartActivity(_ sender: Any) {
