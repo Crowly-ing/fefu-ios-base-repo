@@ -65,8 +65,8 @@ class ActivityListController: UIViewController {
     }
     
     @IBAction func didStartActivity(_ sender: Any) {
-        emptyDataView.isHidden = true
-        activityList.isHidden = false
+        let VC = ActivityTrackingController(nibName: "ActivityTrackingController", bundle: nil)
+        self.navigationController?.pushViewController(VC, animated: true)
     }
 }
 
