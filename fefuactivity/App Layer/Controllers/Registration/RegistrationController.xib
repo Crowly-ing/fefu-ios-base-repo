@@ -12,6 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationController" customModule="fefuactivity" customModuleProvider="target">
             <connections>
                 <outlet property="continueButton" destination="cdC-kc-wo3" id="Iig-Dv-Prb"/>
+                <outlet property="loginField" destination="pgP-iw-9gE" id="kEK-hB-qgl"/>
+                <outlet property="nameField" destination="N8l-gS-bcM" id="DmN-HB-AOO"/>
+                <outlet property="passwordConfirmationField" destination="d8D-RI-e1J" id="fD7-5B-MB8"/>
+                <outlet property="passwordField" destination="dWB-Um-RUQ" id="QY5-Ao-1Mf"/>
                 <outlet property="selectGender" destination="3r5-xe-P8A" id="Z8H-gd-0qd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -78,6 +82,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="didTapContinue:" destination="-1" eventType="touchUpInside" id="etC-MU-2AP"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пол" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-GO-Kd0">
                     <rect key="frame" x="32" y="295" width="32" height="20"/>

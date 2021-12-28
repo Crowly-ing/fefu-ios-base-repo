@@ -14,9 +14,6 @@ class ViewController: UIViewController {
         
         registerButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         loginButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        
-        let VC = TabsController(nibName: "TabsController", bundle: nil)
-        present(VC, animated: true, completion: nil)
     }
     
     func commonInit() {
