@@ -117,6 +117,13 @@ extension AuthService {
         var urlReq = URLRequest(url: url)
         urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlReq.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlReq.httpBody = nil
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            
+            print("bad token")
+            return
+        }
+        urlReq.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         
         let session = URLSession.shared
         
@@ -159,8 +166,16 @@ extension AuthService {
         
         var urlReq = URLRequest(url: url)
         urlReq.httpMethod = "POST"
+        urlReq.httpBody = nil
         urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlReq.addValue("application/json", forHTTPHeaderField: "Accept")
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            
+            print("bad token")
+            return
+        }
+        
+        urlReq.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         
         let session = URLSession.shared
         
@@ -170,7 +185,9 @@ extension AuthService {
                 return
             }
             
+            
             if let res = response as? HTTPURLResponse {
+                print(res.statusCode)
                 if res.statusCode == 200 {
                     completion()
                     return

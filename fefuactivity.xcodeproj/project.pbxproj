@@ -40,6 +40,8 @@
 		B4F1A0352768E8E9006D8521 /* fefuactivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0332768E8E9006D8521 /* fefuactivity.xcdatamodeld */; };
 		B4F1A0382768F5B3006D8521 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0372768F5B3006D8521 /* Types.swift */; };
 		B4F1A03A2768F5F2006D8521 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0392768F5F2006D8521 /* AuthService.swift */; };
+		C440623C27A1856E006493C3 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440623A27A1856E006493C3 /* ProfileTableViewCell.swift */; };
+		C440623D27A1856E006493C3 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440623B27A1856E006493C3 /* ProfileTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		B4F1A0342768E8E9006D8521 /* fefuactivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fefuactivity.xcdatamodel; sourceTree = "<group>"; };
 		B4F1A0372768F5B3006D8521 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		B4F1A0392768F5F2006D8521 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C440623A27A1856E006493C3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		C440623B27A1856E006493C3 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			children = (
 				B4BEC0CD27678CF4006BBAAB /* ActivityTableViewCell.swift */,
 				B4BEC0CE27678CF4006BBAAB /* ActivityTableViewCell.xib */,
+				C440623A27A1856E006493C3 /* ProfileTableViewCell.swift */,
+				C440623B27A1856E006493C3 /* ProfileTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				B4BEC0CA276774BF006BBAAB /* ProfileController.xib in Resources */,
 				B4BEC0D527679271006BBAAB /* ActivityDetailsController.xib in Resources */,
 				1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */,
+				C440623D27A1856E006493C3 /* ProfileTableViewCell.xib in Resources */,
 				B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */,
 				1DE4E5CC270A5CCE004A30CA /* Main.storyboard in Resources */,
 				B4BEC0C1276773FD006BBAAB /* TabsController.xib in Resources */,
@@ -358,6 +365,7 @@
 				B4F1A0302768E882006D8521 /* CoreDataContainer.swift in Sources */,
 				B4F1A02A2768E254006D8521 /* TypeCollectionViewCell.swift in Sources */,
 				1DE4E5C9270A5CCE004A30CA /* ViewController.swift in Sources */,
+				C440623C27A1856E006493C3 /* ProfileTableViewCell.swift in Sources */,
 				B4F1A0382768F5B3006D8521 /* Types.swift in Sources */,
 				B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */,
 				B4F1A0262768E191006D8521 /* FinishButton.swift in Sources */,
