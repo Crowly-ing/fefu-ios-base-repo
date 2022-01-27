@@ -75,13 +75,16 @@ class ProfileController: UIViewController {
 
 extension ProfileController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.row == 2 {
+            let vc = ChangePasswordController(nibName: "ChangePasswordController", bundle: nil)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
 extension ProfileController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 3
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -103,6 +106,10 @@ extension ProfileController: UITableViewDataSource {
         let row =  indexPath.section == 1 ? 3 : indexPath.row
         let data = data[row]
         let cell = profileContentView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath)
+        
+        if indexPath.row == 2 {
+            cell.accessoryType = .disclosureIndicator
+        }
         
         guard let upcCell = cell as? ProfileTableViewCell else {
             return UITableViewCell()

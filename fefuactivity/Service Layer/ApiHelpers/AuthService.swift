@@ -205,4 +205,59 @@ extension AuthService {
         }
         task.resume()
     }
+    
+    static func activities(completion: @escaping ((SocialActivitiesModel) -> Void),
+                           onError :@escaping((ErrorAPI) -> Void)) {
+        guard let url = URL(string: "https://fefu.t.feip.co/api/user/activities") else {
+            print("Битая ссылка")
+            return
+        }
+        
+        var urlReq = URLRequest(url: url)
+        
+        urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlReq.addValue("application/json", forHTTPHeaderField: "Accept")
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            
+            print("bad token")
+            return
+        }
+        
+        urlReq.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlReq) { data, response, error in
+            guard let data = data else {
+                return
+            }
+            
+            
+            if let res = response as? HTTPURLResponse {
+                print(res.statusCode)
+                if res.statusCode == 200 {
+                    do {
+                        let types = try decoder.decode(SocialActivitiesModel.self, from: data)
+                        print(types)
+                        completion(types)
+                        return
+                    } catch let e {
+                        print("Decode error: \(e)")
+                    }
+                } else if res.statusCode == 422 {
+                    do {
+                        let error = try decoder.decode(ErrorAPI.self, from: data)
+                        onError(error)
+                    } catch {
+                        print("Decode error: \(error)")
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        task.resume()
+        
+    }
 }

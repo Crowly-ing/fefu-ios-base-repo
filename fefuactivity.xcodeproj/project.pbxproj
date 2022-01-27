@@ -42,6 +42,8 @@
 		B4F1A03A2768F5F2006D8521 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F1A0392768F5F2006D8521 /* AuthService.swift */; };
 		C440623C27A1856E006493C3 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440623A27A1856E006493C3 /* ProfileTableViewCell.swift */; };
 		C440623D27A1856E006493C3 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440623B27A1856E006493C3 /* ProfileTableViewCell.xib */; };
+		C4CEDA5627A2D03500DFBD9B /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CEDA5427A2D03500DFBD9B /* ChangePasswordController.swift */; };
+		C4CEDA5727A2D03500DFBD9B /* ChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CEDA5527A2D03500DFBD9B /* ChangePasswordController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		B4F1A0392768F5F2006D8521 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C440623A27A1856E006493C3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		C440623B27A1856E006493C3 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		C4CEDA5427A2D03500DFBD9B /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
+		C4CEDA5527A2D03500DFBD9B /* ChangePasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		B4BEC0AA27675C7C006BBAAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C4CEDA5327A2D00B00DFBD9B /* ChangePassword */,
 				1DE4E5C8270A5CCE004A30CA /* ViewController.swift */,
 				B4BEC0B4276761F8006BBAAB /* Registration */,
 				B4BEC0B927676251006BBAAB /* Login */,
@@ -282,6 +287,15 @@
 			path = ApiHelpers;
 			sourceTree = "<group>";
 		};
+		C4CEDA5327A2D00B00DFBD9B /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				C4CEDA5427A2D03500DFBD9B /* ChangePasswordController.swift */,
+				C4CEDA5527A2D03500DFBD9B /* ChangePasswordController.xib */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +361,7 @@
 				B4BEC0C6276774AF006BBAAB /* ActivityListController.xib in Resources */,
 				B4BEC0CA276774BF006BBAAB /* ProfileController.xib in Resources */,
 				B4BEC0D527679271006BBAAB /* ActivityDetailsController.xib in Resources */,
+				C4CEDA5727A2D03500DFBD9B /* ChangePasswordController.xib in Resources */,
 				1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */,
 				C440623D27A1856E006493C3 /* ProfileTableViewCell.xib in Resources */,
 				B4BEC0B827676230006BBAAB /* LoginController.xib in Resources */,
@@ -369,6 +384,7 @@
 				B4F1A0382768F5B3006D8521 /* Types.swift in Sources */,
 				B4BEC0B727676230006BBAAB /* LoginController.swift in Sources */,
 				B4F1A0262768E191006D8521 /* FinishButton.swift in Sources */,
+				C4CEDA5627A2D03500DFBD9B /* ChangePasswordController.swift in Sources */,
 				B4F1A03A2768F5F2006D8521 /* AuthService.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
 				B4F1A0322768E8A9006D8521 /* CDController.swift in Sources */,

@@ -8,6 +8,7 @@ struct ActivityTableCellVM {
     let icon: UIImage
     let start: String
     let end: String
+    let creatorName: String
 }
 
 class ActivityTableViewCell: UITableViewCell {
@@ -17,6 +18,10 @@ class ActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var timeAgoLabel: UILabel!
+    
+    @IBOutlet weak var nameOutlet: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +43,7 @@ class ActivityTableViewCell: UITableViewCell {
         titleLabel.text = model.title
         iconView.image = model.icon
         timeAgoLabel.text = model.timeAgo
+        //name.text = model.creatorName
     }
     
 }
