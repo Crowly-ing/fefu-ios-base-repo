@@ -38,7 +38,7 @@
                     </constraints>
                     <color key="textColor" systemColor="secondaryLabelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIG-f3-Cqu" customClass="PrimaryButton" customModule="fefuactivity" customModuleProvider="target">
                     <rect key="frame" x="32" y="172" width="350" height="50"/>
