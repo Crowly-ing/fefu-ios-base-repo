@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="9kP-vf-KjW">
             <objects>
-                <viewController id="Zyu-Rp-ZBT" customClass="ViewController" customModule="fefuactivity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startpage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zyu-Rp-ZBT" customClass="ViewController" customModule="fefuactivity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lw5-BR-hl7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

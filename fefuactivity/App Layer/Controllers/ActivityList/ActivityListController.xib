@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="activityList" destination="qEE-BA-9o1" id="fOR-8u-VAC"/>
                 <outlet property="emptyDataView" destination="Smn-vr-rcL" id="TrP-we-5rm"/>
+                <outlet property="segmentC" destination="AIb-II-2Zj" id="alH-Mp-KeB"/>
                 <outlet property="startActivityButton" destination="NCw-mP-yAQ" id="OcM-7E-EQ2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -37,10 +38,25 @@
                                 <action selector="didStartActivity:" destination="-1" eventType="touchUpInside" id="DqT-A4-ZJM"/>
                             </connections>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="103" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qEE-BA-9o1">
-                            <rect key="frame" x="16" y="0.0" width="382" height="639"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sei-4m-29r" userLabel="tumblerView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AIb-II-2Zj">
+                                    <rect key="frame" x="28" y="8" width="359" height="32"/>
+                                    <segments>
+                                        <segment title="Мои"/>
+                                        <segment title="Сообщества"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </tableView>
+                            <constraints>
+                                <constraint firstItem="AIb-II-2Zj" firstAttribute="leading" secondItem="Sei-4m-29r" secondAttribute="leading" constant="28" id="M4S-ei-o6f"/>
+                                <constraint firstAttribute="height" constant="51" id="dTs-JP-Pu4"/>
+                                <constraint firstItem="AIb-II-2Zj" firstAttribute="top" secondItem="Sei-4m-29r" secondAttribute="top" constant="8" id="eBm-m6-UNr"/>
+                                <constraint firstAttribute="trailing" secondItem="AIb-II-2Zj" secondAttribute="trailing" constant="27" id="mp0-5Q-WzJ"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-vr-rcL">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
                             <subviews>
@@ -66,21 +82,33 @@
                                 <constraint firstItem="AAC-Zr-CLU" firstAttribute="centerX" secondItem="Smn-vr-rcL" secondAttribute="centerX" id="DlU-Cw-dIR"/>
                             </constraints>
                         </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="103" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qEE-BA-9o1">
+                            <rect key="frame" x="16" y="51" width="382" height="588"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstItem="NCw-mP-yAQ" firstAttribute="top" secondItem="qEE-BA-9o1" secondAttribute="bottom" constant="16" id="2dI-IJ-5gT"/>
+                        <constraint firstAttribute="trailing" secondItem="Sei-4m-29r" secondAttribute="trailing" id="4jb-SQ-McM"/>
                         <constraint firstItem="Smn-vr-rcL" firstAttribute="top" secondItem="qEq-yR-EkN" secondAttribute="top" id="BdY-Iq-0Kn"/>
-                        <constraint firstItem="qEE-BA-9o1" firstAttribute="top" secondItem="qEq-yR-EkN" secondAttribute="top" id="Cqz-Ye-lXV"/>
                         <constraint firstAttribute="trailing" secondItem="qEE-BA-9o1" secondAttribute="trailing" constant="16" id="Eh3-bU-np2"/>
                         <constraint firstItem="NCw-mP-yAQ" firstAttribute="leading" secondItem="qEq-yR-EkN" secondAttribute="leading" constant="32" id="FZX-3o-cKL"/>
                         <constraint firstItem="qEE-BA-9o1" firstAttribute="leading" secondItem="qEq-yR-EkN" secondAttribute="leading" constant="16" id="HwM-qk-aXx"/>
+                        <constraint firstItem="Sei-4m-29r" firstAttribute="top" secondItem="qEq-yR-EkN" secondAttribute="top" id="TdO-oI-R00"/>
+                        <constraint firstItem="qEE-BA-9o1" firstAttribute="top" secondItem="Sei-4m-29r" secondAttribute="bottom" id="aRc-fY-WXf"/>
                         <constraint firstAttribute="bottom" secondItem="NCw-mP-yAQ" secondAttribute="bottom" constant="20" id="evf-ek-7yB"/>
+                        <constraint firstItem="Sei-4m-29r" firstAttribute="leading" secondItem="qEq-yR-EkN" secondAttribute="leading" id="fYP-EJ-w3y"/>
                         <constraint firstAttribute="trailing" secondItem="NCw-mP-yAQ" secondAttribute="trailing" constant="32" id="j6h-wE-cwI"/>
                         <constraint firstItem="NCw-mP-yAQ" firstAttribute="top" secondItem="Smn-vr-rcL" secondAttribute="bottom" id="mpI-cP-2C8"/>
                         <constraint firstItem="Smn-vr-rcL" firstAttribute="leading" secondItem="qEq-yR-EkN" secondAttribute="leading" id="ufC-S2-xkN"/>
                         <constraint firstAttribute="trailing" secondItem="Smn-vr-rcL" secondAttribute="trailing" id="zZz-gS-jVw"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Smn-vr-rcL"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -93,7 +121,7 @@
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-            <point key="canvasLocation" x="139" y="144"/>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
         </view>
     </objects>
     <resources>

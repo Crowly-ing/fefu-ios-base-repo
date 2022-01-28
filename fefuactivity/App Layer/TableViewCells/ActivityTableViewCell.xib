@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="103"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Расстояние" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqL-qs-oqu">
-                                <rect key="frame" x="16" y="13" width="311" height="26"/>
+                                <rect key="frame" x="16" y="13" width="126" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,13 +55,20 @@
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKu-rm-1gk">
+                                <rect key="frame" x="311" y="16" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fHY-AE-xbw" firstAttribute="leading" secondItem="7kI-sW-lkE" secondAttribute="trailing" constant="5.5" id="DfN-Rd-ffc"/>
-                            <constraint firstAttribute="trailing" secondItem="CqL-qs-oqu" secondAttribute="trailing" constant="16" id="FxH-GW-jFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="YKu-rm-1gk" secondAttribute="trailing" constant="32" id="FLG-ui-5cL"/>
                             <constraint firstAttribute="trailing" secondItem="Np1-81-Sza" secondAttribute="trailing" constant="16" id="HYf-zf-7g3"/>
                             <constraint firstItem="CqL-qs-oqu" firstAttribute="top" secondItem="wA9-R0-nmp" secondAttribute="top" constant="13" id="IYV-aV-mOs"/>
+                            <constraint firstItem="YKu-rm-1gk" firstAttribute="top" secondItem="wA9-R0-nmp" secondAttribute="top" constant="16" id="Mgs-iA-V0r"/>
                             <constraint firstAttribute="bottom" secondItem="aUN-8d-1e3" secondAttribute="bottom" constant="16" id="MsU-XN-Okh"/>
                             <constraint firstAttribute="bottom" secondItem="fHY-AE-xbw" secondAttribute="bottom" constant="16" id="RJF-qk-RrN"/>
                             <constraint firstItem="CqL-qs-oqu" firstAttribute="leading" secondItem="wA9-R0-nmp" secondAttribute="leading" constant="16" id="ROB-RC-Esm"/>
