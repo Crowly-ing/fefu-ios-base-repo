@@ -1,7 +1,6 @@
 import UIKit
 
 class ProfileController: UIViewController {
-
     
     var data = [
         0: innerProfileModel(rowName: "", rowData: ""),
@@ -9,7 +8,8 @@ class ProfileController: UIViewController {
         2: innerProfileModel(rowName: "", rowData: ""),
         3: innerProfileModel(rowName: "", rowData: "")
         
-    ] //  0 = log 1 = nickname etc we can add enum but i dont care
+    ]
+    
     let login = "Логин:"
     let name = "Имя или никнейм:"
     let password = "Пароль:"
@@ -18,25 +18,24 @@ class ProfileController: UIViewController {
     var logData = ""
     
     
-    
     @IBOutlet weak var exitBtn: UIButton!
     @IBOutlet weak var profileContentView: UITableView!
     
     @IBAction func exitBtnTap(_ sender: Any) {
-            AuthService.logout {
-                DispatchQueue.main.async {
-                    UserDefaults.standard.removeObject(forKey: "token")
-                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-                                    
-                    vc?.modalPresentationStyle = .overFullScreen
-                    self.present(vc!, animated: true)
-                }
-            
-            } onError: { err in
-                print(err)
+        AuthService.logout {
+            DispatchQueue.main.async {
+                UserDefaults.standard.removeObject(forKey: "token")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                
+                vc?.modalPresentationStyle = .overFullScreen
+                self.present(vc!, animated: true)
             }
+            
+        } onError: { err in
+            print(err)
+        }
     }
-        
+    
     
     private func sinit() {
         profileContentView.delegate = self
@@ -60,6 +59,7 @@ class ProfileController: UIViewController {
         
         AuthService.profile { profile in
             DispatchQueue.main.async {
+                
                 self.data[0] = innerProfileModel(rowName: self.login, rowData: profile.login)
                 self.data[1] = innerProfileModel(rowName: self.name, rowData: profile.name)
                 self.data[2] = innerProfileModel(rowName: self.password, rowData: "acces dehind")
@@ -103,6 +103,7 @@ extension ProfileController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let row =  indexPath.section == 1 ? 3 : indexPath.row
         let data = data[row]
         let cell = profileContentView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath)
@@ -115,7 +116,7 @@ extension ProfileController: UITableViewDataSource {
             return UITableViewCell()
         }
         upcCell.bind(data!)
-                
+        
         return upcCell
     }
 }
